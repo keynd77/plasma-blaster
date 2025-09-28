@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Gun Image</title>
+</head>
+<body>
+    <h1>Testing Gun Image</h1>
+    <img src="gun.png" alt="Gun Image" style="max-width: 200px; max-height: 200px;">
+    <p>If you can see the gun image above, it's loading correctly.</p>
+    <script>
+        const img = new Image();
+        img.onload = () => {
+            console.log('Image loaded successfully:', img.naturalWidth, 'x', img.naturalHeight);
+        };
+        img.onerror = (error) => {
+            console.log('Image failed to load:', error);
+        };
+        img.src = 'gun.png';
+    </script>
+</body>
+</html>
